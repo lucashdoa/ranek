@@ -1,30 +1,52 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <TheHeader />
+  <main></main>
+  <footer></footer>
 </template>
 
+<script>
+import TheHeader from "@/components/TheHeader.vue";
+export default {
+  components: {
+    TheHeader,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#nav {
-  padding: 30px;
+p,
+h1,
+h2,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./assets/pattern.svg") no-repeat top;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+ul {
+  list-style: none;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn {
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 30px;
+  background: #87f;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #65d;
+  transform: scale(1.1);
 }
 </style>
